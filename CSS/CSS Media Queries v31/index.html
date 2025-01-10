@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: red;
+        }
+
+        /* @media not|only mediatype and (expressions) {
+            CSS code;
+        }
+        */
+        @media only screen and (max-width: 455px) {
+            body{
+                background-color: blue;
+            }
+            .boxes{
+                flex-direction: column;
+            }
+        }
+        @media screen and (orientation: landscape) {
+            body{
+                border: 2px solid blueviolet;
+            }
+        }
+
+        .boxes{
+            display: flex;
+            justify-content: center;
+        }
+        .box{
+            width: 344px;
+            height: 344px;
+            background-color: slateblue;
+            padding: 3px;
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        This is a demo media
+    </div>
+
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
