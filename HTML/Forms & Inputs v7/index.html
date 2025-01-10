@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Froms-let's try</title>
+  </head>
+  <body>
+    <h1>Form to apply for learning JS with Jarvis</h1>
+    <form action="post">
+      <div>
+        <label for="username">Enter your Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Enter your username"
+        />
+      </div>
+      <div>
+        <label>
+          <input type="radio" name="gender" value="male" required /> Male
+        </label>
+        <label>
+          <input type="radio" name="gender" value="female" /> Female
+        </label>
+      </div>
+      <div>
+        <form action="#" method="post">
+          <label>
+            <input type="checkbox" name="agree" value="yes" /> I agree to the
+            terms and conditions
+          </label>
+        </form>
+      </div>
+      <div>
+        <label for="comment">Enter your text</label>
+        <br>
+        <textarea name="comment" rows="8" cols="50" id=""></textarea>
+      </div>
+      <div>
+        <label for="learning-mode">Select Learning Mode:</label>
+        <select name="learning-mode" id="learning-mode">
+          <option value="online">Online</option>
+          <option value="offline">Offline</option>
+          <option value="hybrid">Hybrid</option>
+        </select>
+      </div>
+    </form>
+  </body>
+</html>
