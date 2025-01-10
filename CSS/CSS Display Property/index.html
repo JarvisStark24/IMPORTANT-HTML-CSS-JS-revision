@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Display Property</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        border: 2px solid blue;
+        display: inline-block;
+        width: 344px;
+        padding: 45px;
+        margin: 34px;
+        /* display: none; */
+        display: inline-flex;
+        justify-content: center;
+      }
+      .box1{
+        border: 2px solid blue;
+        display: inline-block;
+        width: 344px;
+        padding: 45px;
+        margin: 34px;
+        /* display: none; */
+        /* visibility: hidden; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">This is a box</div>
+    <div class="box1">Also a box</div>
+    <span>Third demo box</span>
+  </body>
+</html>
