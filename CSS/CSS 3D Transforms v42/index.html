@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 3D Transfroms</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            height: 50px;
+            width: 50px;
+            background-color: aquamarine;
+            border: 2px solid blue;
+            transform: rotate(0.125turn);
+            transform-origin: -50% -50%;
+            /* transform: rotate(40deg); */
+            /* transform: rotateX(30deg); */
+            /* transform: rotatey(30deg); */
+            /* transform: rotatez(30deg); */
+            /* transform: scale(1.5); */
+            /* transform: scaleX(1.5); */
+            /* transform: scaleY(1.5); */
+            /* transform: scaleZ(1.5); */
+            /* transform: scale3d(); */
+            /* transform: skew(5deg); */
+            /* transform: skewX(35deg); */
+            /* transform: skewY(35deg); */
+            /* transform: translate(100%); */
+            /* transform: translateX(100%); */
+            /* transform: translateY(100%) skewX(40deg) translateX(45%); */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            margin: 55px;
+            width: 100vw;
+            height: 80vh;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Dummy
+        </div>
+    </div>
+</body>
+</html>
