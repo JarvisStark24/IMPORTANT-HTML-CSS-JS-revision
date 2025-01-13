@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Object-fit & cover</title>
+    <style>
+        .container{
+            height: 466px;
+            width: 488px;
+            border: 2px solid black;
+            background-image: url("https://png.pngtree.com/png-vector/20191126/ourmid/pngtree-image-of-cute-radish-vector-or-color-illustration-png-image_2040180.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-clip: border-box;
+        }
+        img{
+            width: 466px;
+            height: 488px;
+            object-fit: contain;
+            /* object-position: top left; */
+            /* object-fit: contain; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="https://miro.medium.com/v2/resize:fit:20864/1*oM1GuZ0oC3_9v1GfKC2Egg.jpeg" alt=""> -->
+    </div>
+</body>
+</html>
