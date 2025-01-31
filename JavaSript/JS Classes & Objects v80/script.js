@@ -15,32 +15,31 @@
 
 // rabbit.__proto__ = animal; // rabbit object inherits from animal object // sets rabbit.[[Prototype]] = animal
 
-
 //Understanding of classes in JavaScript
 class Animal {
-    constructor(name){
-        this.name = name;
-        console.log("object is created");
-    }
-    eats(){
-        console.log("Animals are eating");
-    }
-    jump(){
-        console.log("Animals are jumping");
-    }
+  constructor(name) {
+    this.name = name;
+    console.log("object is created");
+  }
+  eats() {
+    console.log("Animals are eating");
+  }
+  jump() {
+    console.log("Animals are jumping");
+  }
 }
 
 class Lion extends Animal {
-    constructor(name){
-        super(name);
-        console.log("Lion object is created");
-    }
-    roar(){
-        console.log("Lion is roaring");
-    }
-    eats(){
-        console.log("Lion is eating");
-    }
+  constructor(name) {
+    super(name);
+    console.log("Lion object is created");
+  }
+  roar() {
+    console.log("Lion is roaring");
+  }
+  eats() {
+    console.log("Lion is eating");
+  }
 }
 
 let a = new Animal("Monkey");
