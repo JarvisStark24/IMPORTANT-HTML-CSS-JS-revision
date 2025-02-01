@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Note Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 400px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        button {
+            margin-top: 5px;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+        }
+        .save-btn { background: green; color: white; }
+        .clear-btn { background: red; color: white; }
+        .note-display {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Note Manager</h2>
+    <input type="text" id="noteTitle" placeholder="Enter note title">
+    <textarea id="noteContent" placeholder="Enter note content"></textarea>
+    <button class="save-btn" onclick="saveNote()">Save Note</button>
+    <button class="clear-btn" onclick="clearNote()">Clear Note</button>
+
+    <div id="noteDisplay" class="note-display"></div>
+
+    <script>
+        function saveNote() {
+            let title = document.getElementById("noteTitle").value;
+            let content = document.getElementById("noteContent").value;
+
+            if (!title || !content) {
+                alert("Please enter both title and content.");
+                return;
+            }
+
+            let note = {
+                title: title,
+                content: content,
+                timestamp: new Date().toLocaleString()
+            };
+
+            localStorage.setItem("note", JSON.stringify(note));
+            displayNote();
+            alert("Note saved successfully!");
+        }
+
+        function displayNote() {
+            let storedNote = localStorage.getItem("note");
+            let noteDisplay = document.getElementById("noteDisplay");
+
+            if (storedNote) {
+                let note = JSON.parse(storedNote);
+                noteDisplay.innerHTML = `
+                    <h3>${note.title}</h3>
+                    <p>${note.content}</p>
+                    <small>Saved on: ${note.timestamp}</small>
+                `;
+            } else {
+                noteDisplay.innerHTML = "<p>No note found.</p>";
+            }
+        }
+
+        function clearNote() {
+            localStorage.removeItem("note");
+            displayNote();
+            alert("Note cleared!");
+        }
+
+        // Display note on page load
+        displayNote();
+    </script>
+
+</body>
+</html>
