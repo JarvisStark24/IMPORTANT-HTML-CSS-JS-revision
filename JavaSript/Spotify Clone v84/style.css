@@ -17,12 +17,10 @@ body {
   padding: 10px;
 }
 
-.right {
+.right{
   width: 75vw;
-}
-
-.home {
-  /* padding: 10px; */
+  margin: 16px 0;
+  position: relative;
 }
 
 .home ul li {
@@ -82,18 +80,20 @@ body {
   padding: 20px;
 }
 
-.musicifyPlaylist{
+.musicifyPlaylist {
   padding: 16px;
 }
 
-.cardContainer{
+.cardContainer {
   display: flex;
   gap: 10px;
   margin: 30px;
   flex-wrap: wrap;
+  max-height: 70vh;
+  overflow-y: scroll;
 }
 
-.card{
+.card {
   width: 200px;
   padding: 10px;
   border-radius: 5px;
@@ -101,19 +101,60 @@ body {
   position: relative;
 }
 
-.crad > *{
+.crad > * {
   padding-top: 10px;
 }
 
-.card img{
+.card img {
   width: 100%;
   object-fit: contain;
 }
 
-.play{
+.play {
   position: absolute;
   top: 168px;
   right: 17px;
   opacity: 1;
   transition: all 1s ease-out;
+}
+
+.buttons > * {
+  margin: 0 12px;
+}
+
+.signupbtn,
+.loginbtn {
+  background-color: rgb(34, 34, 34);
+  color: rgb(220, 220, 220);
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(29, 1, 1, 0.274);
+}
+
+.signupbtn:hover,
+.loginbtn:hover {
+  background-color: white;
+  color: rgb(34, 34, 34);
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0 6px 10px rgba(29, 1, 1, 0.274);
+}
+
+.playbar{
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(37, 49, 37);
+  width: 100%;
+  padding: 12px;
+}
+
+.songbuttons{
+  display: flex;
+  justify-content: center;
+  gap: 16px;
 }

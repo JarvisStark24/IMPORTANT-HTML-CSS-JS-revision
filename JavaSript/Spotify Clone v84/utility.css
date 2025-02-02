@@ -20,22 +20,55 @@
   color: white;
 }
 
-.invert{
-    filter: invert(1);
+.invert {
+  filter: invert(1);
 }
 
-.bg-grey{
-    background-color: #121212;
+.bg-grey {
+  background-color: #121212;
 }
 
 .rounded {
   border-radius: 10px;
 }
 
-.m-1{
-    margin: 5px;
+.m-1 {
+  margin: 5px;
 }
 
-.p-1{
+.p-1 {
   padding: 10px;
+}
+
+/* Scrollbar for WebKit Browsers */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #1a1a1a, #0d0d0d); /* Dark gradient */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    45deg,
+    #ff00ff,
+    #7700ff,
+    #0099ff
+  ); /* Neon gradient */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.6);
+  transition: all 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    45deg,
+    #ff33ff,
+    #8833ff,
+    #00ccff
+  ); /* Brighter gradient */
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.8);
+  width: 12px; /* Slightly expands */
 }
