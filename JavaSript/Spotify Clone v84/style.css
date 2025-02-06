@@ -158,3 +158,11 @@ body {
   justify-content: center;
   gap: 16px;
 }
+
+.songList ul{
+  padding: 42px;
+}
+
+.songList li{
+  list-style-type: decimal;
+}
